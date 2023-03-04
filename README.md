@@ -1,6 +1,6 @@
 # CoordinateKit
 
-Lightweight 3d coordinate space calculation library for Swift.
+Lightweight 3d coordinate transformation library for Swift.
 
 ## How to use
 
