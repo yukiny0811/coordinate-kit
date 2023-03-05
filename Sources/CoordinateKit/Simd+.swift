@@ -55,7 +55,7 @@ public extension simd_float4x4 {
 
 public extension simd_float3 {
     func globalPos(with coordinate: simd_float4x4) -> simd_float3 {
-        let pos = simd_float4(self.x, self.y, self.z, 1) * coordinate.inverse
+        let pos = simd_float4(self.x, self.y, self.z, 1)
         return simd_float3(pos.x, pos.y, pos.z)
     }
 }
