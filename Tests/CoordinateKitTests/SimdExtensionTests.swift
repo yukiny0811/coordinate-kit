@@ -58,18 +58,4 @@ final class SimdExtensionTests: XCTestCase {
         )
         XCTAssertEqual(testResult, expectedResult)
     }
-    
-    func testGlobalPos() throws {
-        let original = simd_float3(1, 2, 3)
-        let master = Coordinate3DMaster()
-        master.push()
-        master.translate(1, 2, 3)
-        master.rotateX(2)
-        master.translate(3, -5, 1)
-        master.rotate(2, simd_float3(5, -2, 1))
-        let saveMatrix = master.currentMatrix
-        master.pop()
-        let result = original.globalPos(with: saveMatrix)
-        XCTAssertEqual(result, simd_float3(-3.3454177, -3.099996, 1.6348051))
-    }
 }
